@@ -1,13 +1,13 @@
 
-const Sidebar = ({credit, selects}) => {
+const Sidebar = ({credit, remaining, totalPrice, selects}) => {
     console.log(selects)
     return (
         <div className="w-1/4">
             <div className="bg-white ml-3 p-6 rounded-lg">
-                <h3 className="text-[#2F80ED] font-bold text-2xl mb-4">Credit Hour Remaining 7 hr</h3>
+                <h3 className="text-[#2F80ED] font-bold text-2xl mb-4">Credit Hour Remaining {remaining} hr</h3>
                 <hr className="mb-4 border-[1.5px]" />
                 <h1 className="font-bold text-[26px] mb-5">Course Name</h1>
-                <div className="mb-5 text-lg font-medium">
+                <div className="mb-5 text-[20px] font-medium leading-9 text-[#1C1B1B99]">
                     {
                         selects.map((select, indx)=><ol key={indx}>{indx+1}{". "}{select.course_name}</ol>)
                     }
@@ -15,9 +15,9 @@ const Sidebar = ({credit, selects}) => {
                     
                 </div>
                 <hr className="border-[1px]" />
-                <h2 className="my-5 text-xl font-medium">Total Credit Hour : {credit}</h2>
+                <h2 className="my-5 text-[21px] font-medium">Total Credit Hour : {credit}</h2>
                 <hr className="border-[1px]" />
-                <h2 className="mt-4 text-xl font-semibold">Total Price : 48000 USD</h2>
+                <h2 className="mt-4 text-[22px] font-semibold">Total Price : {totalPrice} USD</h2>
             </div>
         </div>
     );
