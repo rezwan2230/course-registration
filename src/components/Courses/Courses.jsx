@@ -3,7 +3,7 @@ import { useState } from "react";
 import Course from "../Course/Course";
 
 
-const Courses = () => {
+const Courses = ({handleSelect}) => {
 
     const [courses, setCourses] = useState([])
 
@@ -18,7 +18,7 @@ const Courses = () => {
             {/* <h1>course : {courses.length}</h1> */}
             <div className="grid grid-cols-3 gap-8">
             {
-                courses.map((course, index)=><Course key={index} course={course}></Course>)
+                courses.map((course, index)=><Course key={index} course={course} handleSelect={handleSelect}></Course>)
             }
             </div>
 

@@ -1,6 +1,6 @@
 
-const Course = ({course}) => {
-    console.log(course)
+const Course = ({course, handleSelect}) => {
+    // console.log(course)
     const {img, course_name, description, price, credit} = course
     return (
         <div>
@@ -28,7 +28,7 @@ const Course = ({course}) => {
                     </div>
 
                     <div className="card-actions justify-end mt-5">
-                        <button className="btn bg-[#2F80ED] hover:bg-[#2f81ed] w-full text-white">Select</button>
+                        <button onClick={()=>handleSelect(course)} className="btn bg-[#2F80ED] hover:bg-[#2f81ed] w-full text-white">Select</button>
                     </div>
                 </div>
             </div>
