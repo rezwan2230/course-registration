@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 
 const Sidebar = ({credit, remaining, totalPrice, selects}) => {
-    console.log(selects)
     return (
         <div className="w-1/4">
             <div className="bg-white ml-3 p-6 rounded-lg">
@@ -11,8 +11,6 @@ const Sidebar = ({credit, remaining, totalPrice, selects}) => {
                     {
                         selects.map((select, indx)=><ol key={indx}>{indx+1}{". "}{select.course_name}</ol>)
                     }
-                    {/* <li>Introduction to c programming</li> */}
-                    
                 </div>
                 <hr className="border-[1px]" />
                 <h2 className="my-5 text-[21px] font-medium">Total Credit Hour : {credit}</h2>
@@ -22,5 +20,13 @@ const Sidebar = ({credit, remaining, totalPrice, selects}) => {
         </div>
     );
 };
+
+
+Sidebar.propTypes = {
+    credit:PropTypes.number,
+    remaining:PropTypes.number,
+    totalPrice:PropTypes.number,
+    selects:PropTypes.array
+}
 
 export default Sidebar;

@@ -13,7 +13,6 @@ function App() {
 
 
   const handleSelect = (course) => {
-    console.log(course)
     const isExist = selects.find(item => item.course_name === course.course_name)
     let countCredit = course.credit
     let price = course.price
@@ -40,8 +39,6 @@ function App() {
       setTotalPrice(price)
     }
   }
-
-
 
 
   return (

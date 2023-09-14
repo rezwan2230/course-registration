@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 const Course = ({course, handleSelect}) => {
     // console.log(course)
@@ -36,5 +37,10 @@ const Course = ({course, handleSelect}) => {
         </div>
     );
 };
+
+Course.propTypes = {
+    course:PropTypes.object,
+    handleSelect:PropTypes.func
+}
 
 export default Course;
