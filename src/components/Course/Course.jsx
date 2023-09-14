@@ -8,7 +8,7 @@ const Course = ({course, handleSelect}) => {
             <div className="card card-compact  bg-base-100 shadow-lg p-5">
                 <figure><img className="w-full" src={img} alt="Shoes" /></figure>
                 <div className="mt-6">
-                    <h2 className="text-2xl font-bold">{course_name}</h2>
+                    <h2 className="text-[22px] font-bold">{course_name}</h2>
                     <p className="text-lg mt-4 text-[#1c1b1bc1]">{description}</p>
 
                     <div className="flex justify-between mt-4 items-center">

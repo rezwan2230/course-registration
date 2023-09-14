@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 
+
 const Sidebar = ({credit, remaining, totalPrice, selects}) => {
+
+        // const notify = () => toast("Wow so easy!");
     return (
         <div className="w-1/4">
             <div className="bg-white ml-3 p-6 rounded-lg">
