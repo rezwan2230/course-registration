@@ -1,5 +1,5 @@
 
-const Sidebar = ({selects}) => {
+const Sidebar = ({credit, selects}) => {
     console.log(selects)
     return (
         <div className="w-1/4">
@@ -15,7 +15,7 @@ const Sidebar = ({selects}) => {
                     
                 </div>
                 <hr className="border-[1px]" />
-                <h2 className="my-5 text-xl font-medium">Total Credit Hour : </h2>
+                <h2 className="my-5 text-xl font-medium">Total Credit Hour : {credit}</h2>
                 <hr className="border-[1px]" />
                 <h2 className="mt-4 text-xl font-semibold">Total Price : 48000 USD</h2>
             </div>

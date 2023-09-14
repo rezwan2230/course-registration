@@ -28,6 +28,7 @@ function App() {
       if (countCredit > 20) {
         return alert("You can't take upto 20 credits")
       }
+      setCredit(countCredit)
       setSelects([...selects, course])
     }
   }
@@ -40,7 +41,7 @@ function App() {
       <Header></Header>
       <div className='mx-24 mt-12 pb-10 flex gap-4'>
         <Courses handleSelect={handleSelect}></Courses>
-        <Sidebar selects={selects}></Sidebar>
+        <Sidebar credit={credit} selects={selects}></Sidebar>
 
       </div>
     </>
