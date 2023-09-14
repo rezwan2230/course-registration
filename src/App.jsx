@@ -1,11 +1,24 @@
 import './App.css'
+import Courses from './components/Courses/Courses'
+import Header from './components/Header/Header'
 
 function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
-      
+      <Header></Header>
+
+      <div className='mx-24 mt-7 pb-10'>
+        <Courses></Courses>
+        
+
+      </div>
+
+
+
+
+
+
     </>
   )
 }
