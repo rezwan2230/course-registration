@@ -1,5 +1,6 @@
 
-const Sidebar = () => {
+const Sidebar = ({selects}) => {
+    console.log(selects)
     return (
         <div className="w-1/4">
             <div className="bg-white ml-3 p-6 rounded-lg">
@@ -7,12 +8,14 @@ const Sidebar = () => {
                 <hr className="mb-4 border-[1.5px]" />
                 <h1 className="font-bold text-[26px] mb-5">Course Name</h1>
                 <div className="mb-5 text-lg font-medium">
-                    <ol>
-                        <li>Introduction to c programming</li>
-                    </ol>
+                    {
+                        selects.map((select, indx)=><ol key={indx}>{indx+1}{". "}{select.course_name}</ol>)
+                    }
+                    {/* <li>Introduction to c programming</li> */}
+                    
                 </div>
                 <hr className="border-[1px]" />
-                <h2 className="my-5 text-xl font-medium">Total Credit Hour : 13</h2>
+                <h2 className="my-5 text-xl font-medium">Total Credit Hour : </h2>
                 <hr className="border-[1px]" />
                 <h2 className="mt-4 text-xl font-semibold">Total Price : 48000 USD</h2>
             </div>
